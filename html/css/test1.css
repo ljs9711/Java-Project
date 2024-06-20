@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+}
+
+h1,h2{
+    width: 1200px;
+    border: 1px solid black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2{
+    text-align: right;
+}
+
+.tab_1{ /* . 찍은이유는 클래스임을 알기위해*/
+    width: 1200px;
+    border: 0px solid blue;
+    margin: 30px auto;
+}
+
+.tab_1 tr td{
+    width: 171px;
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tab_1 tr .red{ /*붙이는 이유는 자식이기때문 띄면 부모가됨*/
+    color: red;
+}
+
+td.blue{ /* 위처럼 쓰는게 정석이지만 이렇게 줄일 수 있음*/
+    color: blue;
+}
+
+.tab_1 tr .blue:hover{
+    cursor: pointer;
+}
+
+#imgBox{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+#imgBox img{
+    /* width: 1200px; */
+    height: 300px;
+}
+
+/* 공지사항 테이블 시작 */
+.tab_gong{
+    width: 1200px;
+    /* border: 0px solid black; */
+    margin: 30px auto;
+}
+
+.tab_gong tr{
+
+}
+
+.tab_gong tr:hover{
+    background: rgb(203, 201, 201);
+    cursor: pointer;
+}
+
+.tab_gong tr:last-child td{
+    border-bottom: 1px solid black;
+}
+
+/* 테이블 제목의 위,아래 테두리 1px */
+.tab_gong tr th{
+    height: 40px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.tab_gong tr.th:first-child { 
+    width: 100px;
+}
+
+/* :nth-child(숫자) 사용시 몇번째인지 지정가능 */
+.tab_gong tr.th:nth-child(2){
+    width:700px;
+}
+
+.tab_gong tr.th:nth-child(3){
+    width:200px;
+}
+
+.tab_gong tr.th:last-child{
+    width: 200px;
+}
+
+/* 공지사항 테이블의 각 td 설정 */
+.tab_gong tr td{
+    height: 30px;
+    border-bottom: 1px dotted #ccc;
+    text-align: center;
+}
+
+.tab_gong tr td:nth-child(2){
+    text-align: left;
+    margin-top: 10px;
+}
