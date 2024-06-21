@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            width: 200px; height: 200px;
+            border: 1px solid black;
+        }
+        .red{
+            background: red;
+            z-index: 1;
+        }
+        .green{
+            background:  green;
+            top: 0px;
+            left: 0px;
+        }
+        .blue{
+            background: blue;
+            top: 0px;
+            left:0px;
+        }
+        .fixed{
+            position: fixed;
+            top: 100px;
+            left: 250px;
+            width: 100px;
+            height: 100px;
+            background: orange;;
+        }
+        .long{
+            width: 400px;
+            height: 3000px;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">1</div>
+    <div class="green">2</div>
+    <div class="blue">3</div>
+    <p class="fixed">fixed</p>
+    <p class="long">long</p>
+</body>
+</html>
