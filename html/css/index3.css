@@ -4,10 +4,16 @@
     padding: 0;
 }
 
+/* 상단 메뉴 */
 .menu{
+    position: fixed;
+    top: 100px; left:0px;
     width: 100%; height: 70px;
     border: 0px solid black;
     display: flex;
+    z-index: 99;
+    background: white;
+    margin-top: -50px;
 }
 
 .menu div{
@@ -52,6 +58,7 @@
     width: 100px; height: 100%;
     border: 1px solid black;
     background: black;
+    z-index: 98;
 }
 
 .menu .bar p{
@@ -87,6 +94,8 @@
 
 /* ul main */
 .main{
+    position: fixed;
+    top: 50px; left: 10%;
     width: 80%; height:700px;
     border: 0px solid black;
     margin: 50px auto;
@@ -107,32 +116,238 @@
     border: 0px solid red;
     line-height: 70px;
     font-size: 3rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .main .left > p:first-child{
     margin-top: 150px;
 }
 
-.main .left div{
+.main .left > div{
     width: 100%; height: 50px;
-    border: 1px solid green;
+    border: 0px solid green;
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    background: #f2f2f2;
 }
 
 .main .left div p{
-    border: 1px solid red;
+    border: 0px solid red;
     font-size: 1rem;
     width: 30%; height: 100%;
     line-height: 50px; 
+    text-align: center;
 }
 
+.main .left div .left_center{
+    width: 150px; height: 150px;
+    line-height: 100px;
+    margin-top: -50px;
+    border-radius: 100%;
+    background: orange;
+    background: url(../img/240624/img2.jpg);
+    background-size: 100% 100%;
+}
+
+/* 메인 왼쪽 4개 이미지 */
+.main .left .left_img4Box{
+    width: 100%; height: 100px;
+    /* border: 1px solid black; */
+    background: none;
+    justify-content: space-evenly;
+}
+
+.main .left .left_img4Box div{
+    width: 30%; height: 100%;
+    /* border: 1px solid blue; */
+    overflow: hidden;
+}
+
+.main .left .left_img4Box div img{
+    width: 100%; height: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.main .left .left_img4Box div img:hover{
+    transform: scale(1.5);
+}
+
+/* 메인 오른쪽 시작 */
 .main .right{
     width: 70%;
     background: url(../img/240624/img1.jpg);
     background-size: 100% 100%;
     border-top-left-radius: 30%;
+    margin-left: 50px;
 }
 
+/* 메세지1 */
+.msg{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 1000px;
+    background: #cbcaca;
+    margin-top: 100%;
+}
+
+.msg_1{
+    top: 100%;
+    text-align: center;
+}
+
+.msg1_menu{
+    width: 80; height: 70px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.msg1_menu li{
+    width: 200px; height: 100%;
+    border: 1px solid red;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.msg1_text{
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+.msg1_text li:nth-child(1),
+.msg1_text li:nth-child(2),
+.msg1_text li:nth-child(3){
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+.msg1_text li:nth-child(4){
+    margin-top: 100px;
+}
+
+.msg1_text li:nth-child(4),
+.msg1_text li:nth-child(5),
+.msg1_text li:nth-child(6),
+.msg1_text li:nth-child(7){
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    line-height: 40px;
+}
+
+/* 메세지1 오른쪽 원 */
+.msg1_one{
+    position: absolute;
+    top: 200px; left:50%;
+    /* border: 1px solid blue; */
+    width: 30%; height: 50%;
+    background: black;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.msg1_one img{
+    width:100%; height:100%;
+    transition: all 0.5s;
+}
+
+.msg1_one img:hover{
+    transform: scale(1.2);
+}
+
+.msg_2{
+    top: 200%;
+}
+
+.msg_3{
+    top: 300%;
+}
+
+.msg_4{
+    top: 400%;
+}
+
+.msg_5{
+    top: 500%;
+}
+
+.msg_6{
+    top: 600%;
+    height: 850px;
+}
+/* 메세지2 */
+
+.msg2_Box{
+    /* border: 1px solid black; */
+    margin: 0px auto;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.msg2_Box li{
+    /* border: 1px solid blue; */
+}
+
+.msg2_Box .msg2_menu{
+    width: 20%;
+}
+
+.msg2_Box .msg2_menu div{
+    width: 80%; height:50px;
+    border: 1px solid black;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+.msg2_Box li:last-child{
+    width:50%; height: 100%;
+}
+
+.msg2_Box li img{
+    width: 50%; height: 100%;
+}
+
+
+/* 메세지3 */
+.msg_3{
+    top: 300%;
+}
+.msg3Box{
+    width: 80%; height: 300px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+}
+.msg3Box > div{
+    width: 18%; height: 100px;
+    /* border: 1px solid green; */
+}
+
+.msg3Box > div div{
+    width: 100%; height: 200px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+
+.msg3Box > div div img{
+    width: 100%; height: 100%;
+    transition: all 0.5s;
+}
+
+.msg3Box > div p{
+    height: 25px;
+    line-height: 25px;
+}
+
+.msg3Box > div div img:hover{
+    transform: scale(1.2);
+}
