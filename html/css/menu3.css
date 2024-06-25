@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+a{
+    color: black;
+}
+
+body{
+    overflow: hidden;
+}
+
+.bg{
+    width: 100%; height: 100%;
+    background: linear-gradient(to top,white,black);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -1;
+}
+
+.textBox{
+    position: relative;
+    top: 100px; left: 50px;
+    width: 1000px; height: 200px;
+    /* border: 1px solid white; */
+}
+
+.text{
+    cursor: pointer;
+}
+
+/* 텍스트1 애니메이션 */
+.text1{
+    position: absolute;
+    top: 0px; left: 0px;
+    color: white;
+    width: 100%; height: 100px;
+    /* border: 1px solid yellow; */
+    font-size: 3rem; line-height: 100px;
+    animation: text1_ani 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes text1_ani{
+    0% { top: 100px; opacity: 0;}
+    100% { top:0px; opacity: 1;}
+}
+
+/* 텍스트2 애니메이션 */
+.text2{
+    position: relative;
+    top: 0; left: -200px;
+    color: white;
+    font-size: 2rem;
+    animation: text2_ani 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text2_ani{
+    0% {left: -200px; }
+    100% {left: 200px; }
+}
+
+.text3{
+    width: 150px; height: 150px;
+    border: 1px solid white;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.text3:hover{
+    animation: text3_ani 1s linear infinite;
+}
+
+@keyframes text3_ani{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.text3 img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    position: fixed;
+    bottom: -150px; left:80%;
+    width: 100px;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+
+.menu:hover{
+    animation: menu_ani 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menu_ani{
+    0% { bottom: -150px;}
+    100% {bottom: 0px;}
+}
+
+.menu li{
+    width: 100%; height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu li:hover{
+    background: black;
+    color: white;
+}
+
+.cont{
+    position: fixed; top: 100px;
+    top: 100px; left: 70%;
+    width: 500px; height: 300px;
+    border: 1px solid black;
+}
+
+.cont img{
+    width: 100%; height: 100%;
+}

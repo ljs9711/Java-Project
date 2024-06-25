@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴-3</title>
+    <link rel="stylesheet" href="/css/menu3.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="textBox">
+        <p class="text text1">혁신적인 아이템</p>
+    </div>
+
+    <p class="text text2">진취적인 액션</p>
+    <div class="text3">
+        <img src="/img/240625/pinwheel.png" alt="">
+    </div>
+
+    <ul class="menu">
+        <li>선택하세요</li>
+        <li onclick="cont1.style.display='block';
+                    cont2.style.display='none';
+                    cont3.style.display='none';
+                    cont4.style.display='none';">
+            메뉴1
+        </li>
+
+        <li onclick="cont1.style.display='none';
+                    cont2.style.display='block';
+                    cont3.style.display='none';
+                    cont4.style.display='none';">
+            메뉴2
+        </li>
+
+        <li onclick="cont1.style.display='none';
+                    cont2.style.display='none';
+                    cont3.style.display='block';
+                    cont4.style.display='none';">
+            메뉴3
+        </li>
+
+        <li onclick="cont1.style.display='none';
+                    cont2.style.display='none';
+                    cont3.style.display='none';
+                    cont4.style.display='block';">
+            메뉴4
+        </li>
+    </ul>
+    <div class="cont" id="cont1"><img src="/img/240625/img (1).jpg" alt="첨성대"></div>
+    <div class="cont" id="cont2"><img src="/img/240625/img (2).jpg" alt=""></div>
+    <div class="cont" id="cont3"><img src="/img/240625/img (3).jpg" alt=""></div>
+    <div class="cont" id="cont4"><img src="/img/240625/img (4).jpg" alt=""></div>
+</body>
+</html>
