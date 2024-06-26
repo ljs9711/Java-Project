@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+a{
+    color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* 배경 비디오 */
+.vidBox{
+    position: fixed;
+    top:0;left:0;
+    width:100%; height:100%;
+    display: none;
+    z-index: 1;
+}
+
+#vid{
+    width: 100%;
+    /* height: 100%;; */
+    min-width: 1500px;
+}
+
+/* 스킵버튼 */
+.vidBox span{
+    position: fixed;
+    bottom: 100px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    border: 1px solid white;
+    width: 100px; height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+/* 배경이미지 */
+.big{
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url(/img/240626/bg.png);
+    background-size: 100% 100%;
+    animation: vidBox_ani 1s;
+}
+
+/* 배경이미지 키프레임 */
+@keyframes vidBox_ani{
+    0% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+/* 배경 텍스트1 */
+.text1{
+    position: absolute;
+    top: 200px; left: 100px;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    animation: text1_ani 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* 텍스트1 키프레임 */
+@keyframes text1_ani{
+    0%  { top:100px; opacity: 0;}
+    20% { left:-100px; opacity: 0.2;}
+    100% { top:200px; opacity: 1;}
+}
+
+.text2{
+    position: absolute;
+    top: 260px; left: 100px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: text1_ani2 2s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes text1_ani2{
+    0%  { top:150px; opacity: 0;}
+    20% { left:-100px; opacity: 0.2;}
+    100% { top:260px; opacity: 1;}
+}
+
+/* ㅡ사이드 메뉴창ㅡ */
+/* 배경 */
+nav{
+    position: fixed; top: 0; right: 0;
+    z-index: 99;
+    width: 100px; height: 100%;
+    background: rgb(36, 109, 177);
+}
+
+/* 버튼 */
+nav div{
+    width: 80%; height: 40px;
+    border: 1px solid white;
+    border-radius: 15px;
+    margin: 30px auto;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+}
+
+/* 버튼 맨위 여백 */
+nav div:first-child{
+    margin-top: 100px;
+}
+
+nav div a{
+    display: block;
+    color: white;
+    /* border: 1px solid red; */
+}
+
+
+/* 마우스 올리면 */
+nav div:hover{
+    background: rgb(95, 146, 235);
+}
+
+/* ㅡ아티클ㅡ */
+.at {
+    position: absolute; top: 0; left: 0;
+    
+    width: 100%; height: 100%;
+    background: white;
+}
+
+/* 아티클 1번 */
+#at1 {
+    top: 100%;
+}
+.at1_title {
+    width: 1000px; height: 70px;
+    border: 0px solid black;
+    font-size: 3rem;
+    font-family: hy견고딕;
+    line-height: 70px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.at1_menu {
+    width: 30%; height: 40px;
+    border: 0px solid black;
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.at1_menu  li {
+    width: 20%; height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    line-height: 40px; 
+    text-align: center;
+}
+.at1_menu  li:hover {
+    background: #276FB7;
+    color: white;
+}
+/* 그림이 들어가는 전체 박스 */
+.at1_box {
+    width: 1000px; height: 460px;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+}
+.at1_box div {
+    height: 100%;
+    /* border: 1px solid green; */
+}
+.at1_box .left {
+    width: 200px;
+}
+
+.at1_box .left div {
+    width: 100%; height: 100px;
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+}
+
+.at1_box .left div img{
+    width: 100%; height: 100%;
+    /* border: 1px solid #555; */
+}
+
+.at1_box .right {
+    width: 750px;
+    /* border: 1px solid black; */
+    margin-left: 50px;
+}
+
+.at1_box .right img{
+    width: 100%; height: 100%;
+}
+
+/* 아티클2번 */
+#at2 {
+    top: 200%;
+    background: url(/img/240626/camping/bg.jpg);
+    background-size: 100% 100%;
+}
+
+.rev{
+    position: relative;
+    top: 0; left: 0;
+    width: 150px; height: 50px;
+    border: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: blue;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+.rev p{
+    width: 100%; height: 100%;
+    cursor: pointer;
+}
+
+.rev:hover{
+    background: black;
+    border: 1px solid #777;
+}
+
+.rev:hover .go{
+    left: 0;
+}
+
+/* ul태그 */
+.rev .go {
+    position: absolute;
+    top: 100%; left: -100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    transition: all 0.5s;
+}
+
+.rev .go li{
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+.rev .go li:hover {
+    background: orange;
+}
+
+.at2_img4{
+    /* border: 1px solid black; */
+    width: 1000px; height: 150px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.at2_img4 li{
+    position: relative;
+    top:0; left:0;
+    width: 200px; height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* 배경이미지 */
+.at2_img4 li:nth-child(1){
+    background: url(/img/240626/camping/img\ \(7\).jpg);
+    background-size: 100% 100%;
+}
+
+.at2_img4 li:nth-child(2){
+    background: url(/img/240626/camping/img\ \(8\).jpg);
+    background-size: 100% 100%;
+}
+
+.at2_img4 li:nth-child(3){
+    background: url(/img/240626/camping/img\ \(9\).jpg);
+    background-size: 100% 100%;
+}
+
+.at2_img4 li:nth-child(4){
+    background: url(/img/240626/camping/img\ \(10\).jpg);
+    background-size: 100% 100%;
+}
+
+/* 글씨크기 */
+.at2_img4 li div{
+    position: absolute;
+    top:110%; left:0;
+
+    width: 100%; height: 30px;
+    background: white;
+    text-align: center;
+    transition: all 0.5s;
+    font-size: 1.5rem;
+    line-height: 30px;
+    opacity: 0.7;
+}
+
+.at2_img4 li:hover div{
+    top: 80%;
+}
+
+/* 밑 이미지 박스 세트 */
+.at2_one4{
+    position: absolute;
+    top: 60%; left: 20%;
+    /* border: 1px solid black; */
+    width: 60%; height: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.at2_one4 li:nth-child(1){
+    background: url(/img/240626/camping/img\ \(7\).jpg);
+    background-size: 100% 100%;
+}
+
+.at2_one4 li:nth-child(2){
+    background: url(/img/240626/camping/img\ \(8\).jpg);
+    background-size: 100% 100%;
+}
+
+.at2_one4 li:nth-child(3){
+    background: url(/img/240626/camping/img\ \(9\).jpg);
+    background-size: 100% 100%;
+}
+
+.at2_one4 li:nth-child(4){
+    background: url(/img/240626/camping/img\ \(9\).jpg);
+    background-size: 100% 100%;
+}
+
+/* 이미지 박스 세트 안에 원 */
+.at2_one4 li{
+    /* border: 1px solid blue; */
+    border-radius: 50%;
+    width: 20%; height: 100%;
+    background: url(/img/240626/camping/img\ \(11\).JPG);
+    background-size: 100% 100%;
+}
+
+.at2_one4 li div{
+    /* border: 1px solid white; */
+    position: relative;
+    top: 100; left:0;
+    border-radius: 50%;
+    width: 100%; height: 100%;
+    background: white;
+    transition: all 0.5s;
+    opacity: 0.7;
+    line-height: 150px;
+    text-align: center;
+}
+
+
+/* 아티클3 */
+#at3 {
+    top: 300%;
+    background: linear-gradient(to top, white, blue);
+}
+
+.at3_button1 {
+    position: relative;
+    top: 0; left: 0;
+    width: 100px; height: 50px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.at3_button1 p{
+    width: 100%; height: 100%;
+    text-align: center; line-height: 50px;
+    color: white;
+}
+
+.at3_button1 p:hover{
+    top:0;
+}
+
+.at3_button2{
+    width: 150px; height: 50px;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    overflow: hidden;
+}
+
+.at3_button2 p{
+    width: 100%; height: 100%;
+}
+
+.at3_button2:hover div{
+    left: 0;
+}
+
+
+.at3_button2 div{
+    position: absolute;
+    top: 0; left: 100%;
+    width: 100%; height: 100%;
+    background: yellowgreen;
+    transition: all 0.5s;
+}
+
+.at3_button3{
+    position:relative; top:0; left:0;
+
+    width: 150px; height: 50px;
+    border: 1px solid white;
+    text-align: center; line-height: 50px;
+    color: white;
+}
+
+.at3_button3:hover div{
+    left: -100%;
+}
+
+.at3_button3 div{
+    position: absolute; top: 0; left: 0;
+    width: 200%; height:100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.at3_button3 div p{
+    width: 50%; height: 100%;
+}
+
+.at3_button3 div:p:first-child{
+    background: white; color: black;
+}
+.at3_button3 div:p:last-child{
+    background: white; color: black;
+}
+
+.at3_button4{
+    position: absolute;
+    top: 20%; left: 0%;
+    border: 1px solid black;
+    width: 400px; height: 200px;
+    background: url(/img/240626/camping/img\ \(13\).jpg);
+    background-size: 100% 100%;
+}
+
+
+/* 아티클4 */
+#at4 {
+    top: 400%;
+}
+
+.at4_bg{
+    width: 100%; height: 100%;
+}
+
+.at4_menu{
+    position: relative;
+    top: 0; left: 0;
+
+    width: 50%; height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.at4_menu:hover .bg{
+    top: 0%;
+}
+
+.at4_menu div{
+    width: 100px; height: 100%;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+    line-height: 40px;
+}
+
+.at4_menu div.bg{
+    position: absolute;
+    top: -110%; left: 0%;
+    width: 100%;
+    border: 1px solid red;
+    background: purple;
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+#at5 {
+    top: 500%;
+}
