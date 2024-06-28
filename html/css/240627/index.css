@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+a {
+    color: black;
+}
+.bg {
+    position: fixed; top: 0; left: 0;
+    z-index: -1;
+    width: 100%; height: 100%;    
+}
+.vid {
+    width: 100%;
+    min-width: 1500px;
+}
+nav {
+    position: relative;
+    top: 0; left: 0;
+    z-index: 99;
+    width: 100%; height: 100px;
+    border-bottom: 0px solid white;
+    display: flex;
+    justify-content: center;
+}
+nav:hover {
+    background: white;
+}
+nav:hover div {
+    color: black;
+}
+nav:hover div .sub {
+    background: white;
+    color: black;
+}
+nav div {
+    width: 5%; height: 100%;
+    line-height: 100px;
+    border: 0px solid white;
+    text-align: center;
+    color: white;
+    margin-right: 3%;
+}
+nav div p {
+    width: 100%; height: 100%;
+    border: 0px solid red;
+}
+nav div p:hover {
+    color: red;
+    font-family: hy견고딕;
+}
+nav div:hover .sub {
+    height: 160px;
+}
+nav div:nth-child(2):hover .sub {
+    height: 200px;
+}
+nav div:nth-child(3):hover .sub {
+    height: 80px;
+}
+
+nav div .sub {
+    width: 100%; height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+nav div .sub li {
+    width: 100%; height: 40px;
+    border: 0px solid green;
+    line-height: 40px;
+}
+nav div .sub li:hover {
+    background: black; color: white;
+}
+nav div .sub li a {
+    display: block;
+}
+nav div .sub li:hover a {
+    color: white;
+}
+
+
+/* 검색 박스 */
+.searchBox {
+    width: 100%; height: 200px;
+    border: 1px solid rgb(37, 45, 92);
+    background: rgb(37, 45, 92);
+}
+.searchBox ul {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;    
+    margin-top: 50px;
+}
+.searchBox ul li {
+    width: 500px; height: 100px;
+    border: 0px solid white;
+    text-align: center; line-height: 100px;
+}
+.searchBox ul li:first-child {
+    font-size: 3rem;
+    font-family: hy견고딕;
+}
+.searchBox ul li:nth-child(2) {
+    background: white; color: #ccc;
+    text-align: left;
+    text-indent: 20px;
+    font-size: 1.5rem;
+}
+.searchBox ul li:last-child {
+    width: 100px;
+    font-size: 1.5rem;
+    background: rgb(50, 97, 216);
+}
+.searchBox ul li form {
+    width: 100%; height: 100%;
+}
+.searchBox ul li form input {
+    display: block;
+    width: 100%; height: 100%;
+    font-size: 1.5rem;
+    text-indent: 20px;
+    border: none;
+    outline: none;
+}
+
+.big {
+    width: 1600px; height: 500px;
+    border: 0px solid white;
+    
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.big div {
+    width: 50%; height: 100%;
+}
+.big div p {
+    font-size: 2rem;
+    text-indent: 20px;
+    color: white;
+    font-family: hy견고딕;
+    line-height: 70px;
+}
+.big div img {
+    width: 100%; height: 100%;
+}
+.big div:first-child {
+    background: #697278;
+}
+
+
+/* 슬라이드박스 */
